@@ -1,0 +1,495 @@
+<!-- 
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+-->
+
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Muhammed Rinan - Profile</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Profile-style CSS */
+        :root {
+            --brand-black: #000000;
+            --brand-dark-gray: #333333;
+            --brand-light-gray: #f0f0f0;
+            --brand-accent: #c10000; /* Dark red */
+            --font-serif: 'Merriweather', 'Georgia', serif;
+            --font-sans: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+        }
+        body {
+            font-family: var(--font-sans);
+            color: var(--brand-black);
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        @media (min-width: 769px) {
+            .container {
+                margin: 40px auto;
+            }
+        }
+        /* Top Header Area */
+        .profile-header {
+            border-bottom: 2px solid var(--brand-black);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        .category-tag {
+            font-size: 0.75rem;
+            color: var(--brand-dark-gray);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        @media (min-width: 769px) {
+            .category-tag {
+                font-size: 0.85rem;
+                margin-bottom: 15px;
+            }
+        }
+        .profile-name {
+            font-family: var(--font-serif);
+            font-size: 2.25rem;
+            margin: 0 0 10px 0;
+            font-weight: 400;
+            line-height: 1.1;
+        }
+        @media (min-width: 769px) {
+            .profile-name {
+                font-size: 3.5rem;
+            }
+        }
+        .profile-title {
+            font-size: 1.1rem;
+            color: var(--brand-dark-gray);
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        @media (min-width: 769px) {
+            .profile-title {
+                font-size: 1.25rem;
+            }
+        }
+        .profile-location {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        @media (min-width: 769px) {
+            .profile-location {
+                font-size: 1rem;
+            }
+        }
+        /* Main Layout: Sidebar + Content */
+        .layout-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        @media (min-width: 769px) {
+            .layout-wrapper {
+                flex-direction: row;
+                gap: 50px;
+            }
+        }
+        /* Left Sidebar (Stats & Image) */
+        .sidebar {
+            flex: 1;
+            width: 100%;
+        }
+        @media (min-width: 769px) {
+            .sidebar {
+                min-width: 300px;
+            }
+        }
+        .profile-image-placeholder {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 25px auto;
+            aspect-ratio: 1 / 1.25;
+            background-color: var(--brand-light-gray);
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        @media (min-width: 769px) {
+            .profile-image-placeholder {
+                max-width: none;
+                margin-bottom: 30px;
+            }
+        }
+        .stats-box {
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            margin-bottom: 25px;
+        }
+        .stats-box h3 {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        @media (min-width: 769px) {
+            .stats-box h3 {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+            }
+        }
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--brand-light-gray);
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+        @media (min-width: 769px) {
+            .stat-item {
+                padding: 10px 0;
+                font-size: 0.95rem;
+            }
+        }
+        .stat-label {
+            font-weight: 700;
+            color: var(--brand-dark-gray);
+            padding-right: 15px;
+        }
+        .stat-value {
+            text-align: right;
+            max-width: 65%;
+            color: var(--brand-black);
+        }
+        /* Right Content Area (The Article) */
+        .main-content {
+            flex: 2;
+        }
+        @media (min-width: 769px) {
+            .main-content {
+                min-width: 400px;
+            }
+        }
+        .section-title {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--brand-accent);
+            border-bottom: 1px solid var(--brand-light-gray);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+        @media (min-width: 769px) {
+            .section-title {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+        }
+        .article-text {
+            font-family: var(--font-serif);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: var(--brand-dark-gray);
+        }
+        @media (min-width: 769px) {
+            .article-text {
+                font-size: 1.15rem;
+                line-height: 1.8;
+                margin-bottom: 25px;
+            }
+        }
+        .bullet-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+        .bullet-list li {
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        @media (min-width: 769px) {
+            .bullet-list li {
+                font-size: 1.05rem;
+                margin-bottom: 15px;
+                line-height: 1.6;
+            }
+        }
+        .bullet-list strong {
+            color: var(--brand-black);
+        }
+
+        /* Contact Section Styles */
+        .contact-section {
+            margin-top: 50px;
+            border-top: 2px solid var(--brand-black);
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .social-link-item {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--brand-black);
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+        .social-link-item:hover {
+            color: var(--brand-accent);
+        }
+        .social-icon {
+            margin-right: 8px;
+            font-size: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.8rem;
+            color: #888;
+            border-top: 1px solid var(--brand-light-gray);
+            margin-top: 20px;
+        }
+    
+        .performance-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px 0 30px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+        }
+        .perf-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .perf-title-group {
+            text-align: left;
+        }
+        .perf-label {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        .perf-title {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            margin: 0;
+            line-height: 1.2;
+            color: var(--brand-black);
+        }
+        .perf-badge {
+            background-color: #e6f7f0;
+            color: #008a5e;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .perf-graph-container {
+            width: 100%;
+            margin: 20px 0;
+        }
+        .perf-graph-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .perf-stats-row {
+            display: flex;
+            gap: 40px;
+            margin-top: 25px;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 20px;
+        }
+        .perf-stat-box {
+            display: flex;
+            flex-direction: column;
+        }
+        .perf-stat-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .perf-stat-value {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--brand-black);
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<header class="profile-header" style="text-align: center;">
+<h1 class="profile-name">Muhammed Rinan</h1>
+<div class="profile-title">Rising Tech Entrepreneur &amp; IT Engineer</div>
+<div class="profile-location">Current Status: Building foundations in technology and digital commerce | Kerala, India</div>
+</header>
+<div class="layout-wrapper">
+<aside class="sidebar">
+<div class="profile-image-placeholder">
+<img alt="Muhammed Rinan" src="https://lh3.googleusercontent.com/aida/ADBb0ugv-VzVx-t_zoP3fdpKN6CROzbH2G5V7v1SWjTEJNg4vLIJpFTK_NjM6xKftCDPNkk2WgpGnrj_WutyK1GZhOgh42IV4QjZ2io3pWQ8hvxJjIhR_YEaBEbHX5f-i4OxOLfvBQfPerKy5bj97h2iF3IE7d0ckPeF8zCGMvA8--76b1391bNVIptL5oEcbSE-NN1XCnyZdd88eutguWBvGgxmAdm44RZ7klXrgCCHgWpvg85DrjQOYAhJfgBfVt1H1dd4_BCLr9bjsA" style="width: 100%; height: 100%; object-fit: cover; border: none;"/>
+</div>
+<div class="stats-box">
+<h3>Personal Stats</h3>
+<div class="stat-item">
+<span class="stat-label">Age</span>
+<span class="stat-value">19</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">Source of Drive</span>
+<span class="stat-value">Technology, Self-Made Ventures</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">Residence</span>
+<span class="stat-value">Kerala, India</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">Education</span>
+<span class="stat-value">B.Tech IT (1st Year)</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">Core Skills</span>
+<span class="stat-value">Python, C Programming</span>
+</div>
+<div class="stat-item">
+<span class="stat-label">Business</span>
+<span class="stat-value">E-commerce, Currency Trading</span>
+</div>
+</div>
+<div class="stats-box">
+<h3>Did you know?</h3>
+<ul style="padding-left: 15px; font-size: 0.9rem; line-height: 1.5; color: var(--brand-dark-gray);">
+<li style="margin-bottom: 10px;">He actively studies financial markets and explores currency trading through platforms like Zerodha and Upstox.</li>
+<li style="margin-bottom: 10px;">He has a strong creative streak, conceptualizing and designing branding elements for an online retail startup.</li>
+<li style="margin-bottom: 10px;">When stepping away from the screen, he is a strategic eFootball player, analyzing game mechanics and team formations.</li>
+</ul>
+</div>
+</aside>
+<main class="main-content">
+<h2 class="section-title">ABOUT ME</h2>
+<p class="article-text">
+                Muhammed Rinan is an emerging technologist and entrepreneur currently pursuing his first year of a B.Tech in Information Technology. Hailing from Kerala, he is actively combining a rigorous engineering education—with a strong focus on C and Python programming—with a sharp eye for modern digital business. 
+            </p>
+<p class="article-text">
+                Beyond his university coursework, he is expanding into the e-commerce space, having developed brand concepts and logo designs for a women's clothing line named "Rumi," alongside exploring dropshipping business models. His diverse portfolio of interests also includes hands-on experience with currency trading and a strong drive toward building interactive, personalized web platforms.
+            </p>
+<h2 class="section-title" style="margin-top: 30px;">Related Projects &amp; Ventures</h2>
+<ul class="bullet-list">
+<li><strong>"Rumi" Apparel:</strong> Conceptualized a modern women's clothing brand, handling initial branding and logo design.</li>
+<li><strong>Interactive Web Development:</strong> Currently engineering a highly personalized, interactive website project.</li>
+<li><strong>Digital Retail:</strong> Researching and mapping out scalable dropshipping and online logistics models for products like trolley bags.</li>
+<li><strong>Financial Market Analysis:</strong> Exploring the intersection of technology and finance through algorithmic trading models and the study of market psychology.</li>
+<li><strong>Equity Research:</strong> Conducting independent research on listed companies, focusing on long-term value investing and market positioning.</li></ul>
+<h2 class="section-title" style="margin-top: 30px;">TRADING &amp; MARKET ANALYSIS</h2>
+<ul class="bullet-list">
+<li><strong>Currency Markets:</strong> Active participation and research in forex and domestic currency trading environments.</li>
+<li><strong>Technical Analysis:</strong> Specialized in utilizing price action strategies and chart patterns to identify market trends.</li>
+<li><strong>Risk Management:</strong> Implementation of disciplined capital preservation strategies and position sizing models.</li>
+<li><strong>Stock Market Investing:</strong> Active study of equity markets with a focus on fundamental analysis and long-term investment strategies for portfolio growth.</li></ul>
+<div class="performance-card">
+<div class="perf-header">
+<div class="perf-title-group">
+<div class="perf-label">Trading Portfolio</div>
+<h3 class="perf-title">Currency<br/>Trading</h3>
+</div>
+<div class="perf-badge">
+<span class="material-symbols-outlined" style="font-size: 18px;">trending_up</span>
+            +12.4%
+        </div>
+</div>
+<div class="perf-graph-container">
+<img alt="Performance Graph" class="perf-graph-img" src="https://lh3.googleusercontent.com/aida/ADBb0uhciLDSzJKLVzmfAYG1o_tKebdnvQtOGNWx-_FhhBDr9YQrQ6hS_IjvuYXGYBhratHMnsrRBmjOyWu3g-qLjlmIPrhuWUQY08XU9TNThtweTmDecBhgJHG6CHyTxW-AhcF7AGlWaFof2w92EGexgB5dujEKt3_27k8haHjcJC70orYghFJUzNsMtEgS4voGLH1YtIrKreHpd3-lv_Ie3JTEIa9Lbn0C3xgcuMQ3a8qFH9feP4OH_6Qex8xSq7vcwoVouVJ9MOHfrg"/>
+</div>
+<div class="perf-stats-row">
+<div class="perf-stat-box">
+<div class="perf-stat-label">Active Positions</div>
+<div class="perf-stat-value">14</div>
+</div>
+<div class="perf-stat-box">
+<div class="perf-stat-label">Market Volatility</div>
+<div class="perf-stat-value">Low</div>
+</div>
+</div>
+</div><div style="margin-top: 20px; margin-bottom: 30px;">
+<a href="#" style="display: inline-block; background-color: var(--brand-black); color: #ffffff; padding: 12px 24px; text-decoration: none; font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--brand-black); transition: all 0.3s ease; text-align: center; width: auto; min-width: 200px;">Access Portfolio</a>
+</div>
+<h2 class="section-title" style="margin-top: 30px;">Programming Projects</h2>
+<ul class="bullet-list">
+<li><strong>Python Portfolio:</strong> A collection of scripts and applications developed during B.Tech coursework, including data analysis and physics simulations.</li>
+<li><strong>C Language Fundamentals:</strong> Implementation of core algorithms and data structures as part of foundational engineering studies.</li>
+<li><strong>Web Automation:</strong> Exploring the use of Python for automating tasks in e-commerce and trading research.</li>
+</ul>
+<h2 class="section-title" style="margin-top: 30px;">Recent Updates</h2>
+<ul class="bullet-list">
+<li><strong>March 2026:</strong> Commenced development on an interactive personal web platform to showcase engineering and business portfolios.</li>
+<li><strong>December 2025:</strong> Successfully executed complex Python and Physics lab practicals, bridging theoretical knowledge with execution.</li>
+<li><strong>October 2025:</strong> Navigated first series exams with a specialized focus on electronics and foundational IT principles.</li>
+</ul>
+<section class="contact-section">
+<h2 class="section-title">CONNECT WITH ME</h2>
+<p class="article-text" style="font-size: 1rem; margin-bottom: 15px;">Interested in collaboration or learning more about my projects? Reach out through the following channels:</p>
+<div class="social-links">
+<a class="social-link-item" href="#" style="display: inline-block; background-color: var(--brand-black); color: #ffffff; padding: 12px 24px; text-decoration: none; font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--brand-black); transition: all 0.3s ease; text-align: center; width: auto; min-width: 200px;">
+<span class="material-symbols-outlined social-icon">person</span> LinkedIn
+                    </a>
+<a class="social-link-item" href="#" style="display: inline-block; background-color: var(--brand-black); color: #ffffff; padding: 12px 24px; text-decoration: none; font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--brand-black); transition: all 0.3s ease; text-align: center; width: auto; min-width: 200px;">
+<span class="material-symbols-outlined social-icon">code</span> GitHub
+                    </a>
+<a class="social-link-item" href="#" style="display: inline-block; background-color: var(--brand-black); color: #ffffff; padding: 12px 24px; text-decoration: none; font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--brand-black); transition: all 0.3s ease; text-align: center; width: auto; min-width: 200px;">
+<span class="material-symbols-outlined social-icon">alternate_email</span> Twitter / X
+                    </a>
+<a class="social-link-item" href="mailto:rinan@example.com" style="display: inline-block; background-color: var(--brand-black); color: #ffffff; padding: 12px 24px; text-decoration: none; font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--brand-black); transition: all 0.3s ease; text-align: center; width: auto; min-width: 200px;">
+<span class="material-symbols-outlined social-icon">mail</span> Email
+                    </a>
+<a class="social-link-item" href="#" style="display: inline-block; background-color: var(--brand-black); color: #ffffff; padding: 12px 24px; text-decoration: none; font-family: var(--font-sans); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--brand-black); transition: all 0.3s ease; text-align: center; width: auto; min-width: 200px;">
+<span class="material-symbols-outlined social-icon">photo_camera</span> Instagram
+                    </a></div>
+</section>
+<footer>
+    © 2025 Muhammed Rinan. All Rights Reserved.
+</footer>
+</main>
+</div>
+</div>
+</body></html>
